@@ -7,12 +7,12 @@ class BluntForceTrauma
     @app = app
 
     @dirt_nap_duration = 2.hours
-    @max_requests_before_blunt_force_trauma = 70
+    @max_requests_before_blunt_force_trauma = 250
 
     @block_bots = options[:block_bots] || false
 
     # render blank response
-    @response = [403, {'Content-Type' => (options[:content_type] || 'text/html')}, [""]]
+    @response = [503, {'Content-Type' => (options[:content_type] || 'text/html')}, [""]]
   end
 
   def self.resuscitate(specific_ip = nil)
